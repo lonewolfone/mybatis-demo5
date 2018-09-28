@@ -20,6 +20,7 @@
         <environment id="development">
             <!--使用JDBC事务，MySql不自动提交事务-->
             <transactionManager type="JDBC"/>
+            <!--配置数据源-->
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>

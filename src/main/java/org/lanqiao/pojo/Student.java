@@ -11,6 +11,10 @@ public class Student {
 
     }
 
+    public Student(int id) {
+        this.id = id;
+    }
+
     public Student(String sname, int sage, String ssex) {
         this.sname = sname;
         this.sage = sage;

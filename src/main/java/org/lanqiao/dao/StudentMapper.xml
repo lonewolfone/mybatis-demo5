@@ -14,4 +14,24 @@
     <select id="findAllStudent" resultType="Student">
         select * from stu
     </select>
+    <!--sql语句-->
+    <!--方法  参数类型：整型-->
+    <delete id="deleteStuById" parameterType="_int">
+        delete from stu where id =#{id}
+    </delete>
+    <!--sql语句-->
+    <!--方法  参数类型：整型-->
+    <update id="updateStudentById" parameterType="Student">
+        update stu set sname = #{sname} where id = #{id}
+    </update>
+    <!--sql语句-->
+    <!--方法 参数类型：string  结果集类型：-->
+    <select id="findOneById" parameterType="String" resultType="Student">
+        select * from stu where id = #{id}
+    </select>
+    <!--sql语句-->
+    <!--方法  参数类型：整型-->
+    <select id="findStudentByName" resultType="Student">
+        select * from stu where sname like '%' #{sname} '%'
+    </select>
 </mapper>
